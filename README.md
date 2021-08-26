@@ -1,6 +1,6 @@
 # Sentence-Permuted Paragraph Generation
 
-This repository will contain the code package and output examples of the paper:
+This repository will contain the code package and output examples of the **EMNLP 2021** paper:
 
 **[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)**
 
@@ -9,7 +9,7 @@ In this paper, we propose a novel framework PermGen whose objective is to maximi
 
 
 ## Output examples
-We currently only demonstrate the output examples on the ROCStories dataset. The paper is currently under review. We will release our code upon acceptance. 
+We currently only demonstrate the output examples on the ROCStories dataset. We will release our code very soon!
 
 
 ## Contact
