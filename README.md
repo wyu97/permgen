@@ -2,7 +2,7 @@
 
 This repository contains the code package for the **EMNLP'2021** paper:
 
-**[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)** 
+**[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)** [arXiv]() [slides]() [video]()
 
 [Wenhao Yu](https://wyu97.github.io/) (ND), [Chenguang Zhu](https://www.microsoft.com/en-us/research/people/chezhu/) (MSR), [Tong Zhao](https://tzhao.io/) (ND), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao) (ND), [Meng Jiang](http://meng-jiang.com/) (ND).
 
