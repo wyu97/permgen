@@ -8,7 +8,15 @@ In this paper, we propose a novel framework PermGen whose objective is to maximi
 
 ## Usage 
 
+<<<<<<< HEAD
 ## Examples
+=======
+TODO! Coming very soon!
+
+## Examples
+
+TODO! Coming very soon!
+>>>>>>> 51138737bde4cb64c483f02981f166b2431fc921
 
 ## Citation
 If you find this repository useful in your research, please consider to cite our paper:
