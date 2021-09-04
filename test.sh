@@ -5,7 +5,7 @@
 #$ -pe smp 1
 #$ -l gpu=0
 
-CUDA_VISIBLE_DEVICES=3 /afs/crc.nd.edu/user/w/wyu1/anaconda3/envs/bart/bin/python -u main.py \
+CUDA_VISIBLE_DEVICES=3 /afs/crc.nd.edu/user/w/wyu1/anaconda3/envs/bart/bin/python -u models/main.py \
     --data_dir dataset/titlegraphwrite_data_permute \
     --model_name_or_path facebook/bart-base \
     --output_dir outputs/titlegraphwrite_ftest \
