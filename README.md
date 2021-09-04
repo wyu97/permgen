@@ -2,7 +2,9 @@
 
 This repository contains the code package for the **EMNLP'2021** paper:
 
-**[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)** [Wenhao Yu](https://wyu97.github.io/) (ND), [Chenguang Zhu](https://www.microsoft.com/en-us/research/people/chezhu/) (MSR), [Tong Zhao](https://tzhao.io/) (ND), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao) (ND), [Meng Jiang](http://meng-jiang.com/) (ND).
+**[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)** 
+
+[Wenhao Yu](https://wyu97.github.io/) (ND), [Chenguang Zhu](https://www.microsoft.com/en-us/research/people/chezhu/) (MSR), [Tong Zhao](https://tzhao.io/) (ND), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao) (ND), [Meng Jiang](http://meng-jiang.com/) (ND).
 
 In this paper, we propose a novel framework PermGen whose objective is to maximize the expected log-likelihood of output paragraph distributions with respect to all possible sentence orders. PermGen uses hierarchical positional embedding and designs new procedures for training, and decoding. Experiments on three paragraph generation benchmarks demonstrate PermGen generates more diverse outputs with a higher quality than existing models.
 
