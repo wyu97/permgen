@@ -18,7 +18,7 @@ We conducted experiments on three paragraph generation tasks: story generation (
 | ---------- | :-----------:  | :-----------: | :-----------: |
 | ROCStory | [OL-ROC](https://bitbucket.org/VioletPeng/language-model/src/master/) | [PL-ROC](https://arxiv.org/pdf/1811.05701.pdf) | [OP-ROC](https://drive.google.com/drive/folders/1hQ4OMdJZCe9DhzLpv5Wkg-2rufVFePpE?usp=sharing) |
 | AGENDA | [OL-AG](https://github.com/rikdz/GraphWriter) | [PL-AG](https://arxiv.org/pdf/1904.02342.pdf) | [OP-AG](https://drive.google.com/drive/folders/1ydkQSBuHlkteGN07Ul57_Qdz64N2zTJu?usp=sharing) |
-| DailyMail | [OL-DM](https://www.tensorflow.org/datasets/catalog/cnn_dailymail) | [OP-DM](https://arxiv.org/pdf/1704.04368.pdf) | [OP-DM](https://drive.google.com/drive/folders/1GXColf7nfNAC5E0NCGBHgijzwR8wQqUj?usp=sharing) |
+| DailyMail | [OL-DM](https://www.tensorflow.org/datasets/catalog/cnn_dailymail) | [PL-DM](https://arxiv.org/pdf/1704.04368.pdf) | [OP-DM](https://drive.google.com/drive/folders/1GXColf7nfNAC5E0NCGBHgijzwR8wQqUj?usp=sharing) |
 
 After downloading the pre-processed datasets, please put them in the `dataset` folder. 
 
