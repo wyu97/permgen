@@ -248,9 +248,9 @@ def main():
         output = trainer.evaluate()
         predictions = output.predictions.tolist()
 
-        out_pred_path = training_args.output_dir + '/output_epoch_pred.txt'
-        out_pred_metric = training_args.output_dir + '/output_metric_pred.txt'
-        out_pred_ref = data_args.data_dir + '/val.ref'
+        out_pred_path = training_args.output_dir + '/output_pred_dev.txt'
+        out_pred_metric = training_args.output_dir + '/output_metric_dev.json'
+        out_pred_ref = data_args.data_dir + '/val.target'
 
         with open(out_pred_path, 'w') as eval_out:
             for pred in predictions:
@@ -271,22 +271,25 @@ def main():
         logging.info("*** Test ***")
 
         test_output = trainer.predict(test_dataset=test_dataset)
-        test_metrics = {k.replace("eval", "test"): v for k, v in test_output.metrics.items()}
+        predictions = test_output.predictions.tolist()
 
-        if trainer.is_world_process_zero():
-            logger.info("***** Test results *****")
-            for key, value in test_metrics.items():
-                logger.info("  %s = %s", key, value)
+        out_pred_path = training_args.output_dir + '/output_pred_test.txt'
+        out_pred_metric = training_args.output_dir + '/output_metric_test.json'
+        out_pred_ref = data_args.data_dir + '/test.target'
 
-            save_json(test_metrics, os.path.join(training_args.output_dir, "test_results.json"))
-            eval_results.update(test_metrics)
+        with open(out_pred_path, 'w') as eval_out:
+            for pred in predictions:
+                output_line = tokenizer.decode(pred, 
+                        skip_special_tokens=True, clean_up_tokenization_spaces=False)
+                eval_out.write(output_line + '\n')
 
-            if training_args.predict_with_generate:
-                test_preds = tokenizer.batch_decode(
-                    test_output.predictions, skip_special_tokens=True, clean_up_tokenization_spaces=True
-                )
-                test_preds = lmap(str.strip, test_preds)
-                write_txt_file(test_preds, os.path.join(training_args.output_dir, "test_generations.txt"))
+        metrics = {'epoch': 'test_mode'}
+        metrics.update(eval_top1_acc(out_pred_path, out_pred_ref, data_args.k_out)) ## top1_metrics
+        metrics.update(eval_topk_acc(out_pred_path, out_pred_ref, data_args.k_out))  ## topk_metrics
+        metrics.update(eval_diversity(out_pred_path, data_args.k_out)) ## diversity_metrics
+
+        with open(out_pred_metric, 'w') as metric_out:
+            json.dump(metrics, metric_out, indent=1)
 
 
 if __name__ == "__main__":

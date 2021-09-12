@@ -683,7 +683,7 @@ class Trainer:
                         epoch_out.write(output_line + '\n')
                 
                 metrics = {'epoch': epoch + 1}
-                val_ref_path = os.path.join(self.args.data_dir, 'val.ref')
+                val_ref_path = os.path.join(self.args.data_dir, 'val.target')
                 metrics.update(eval_top1_acc(out_pred_path, val_ref_path, self.args.k_out)) ## top1_metrics
                 metrics.update(eval_topk_acc(out_pred_path, val_ref_path, self.args.k_out))  ## topk_metrics
                 metrics.update(eval_diversity(out_pred_path, self.args.k_out)) ## diversity_metrics

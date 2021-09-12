@@ -123,14 +123,10 @@ def preprocess_rocstory(ifolder, ofolder):
             if storyline.count('#') != target.count('</s>')-1: continue
 
             storyline_segment = ' '.join(storyline).split(' # ')
-            padded_storyline = [seg for idx, seg in enumerate(storyline_segment)]
-
             target_segment = ' '.join(target[1:]).split(' </s> ')
-            padded_target = [seg for idx, seg in enumerate(target_segment)]
-            assert(padded_storyline and padded_target)
-
-            OutSrc.write('{}\n'.format(' '.join(padded_storyline)))
-            OutTgt.write('{}\n'.format(' '.join(padded_target)))
+            
+            OutSrc.write('{}\n'.format(' '.join(storyline_segment)))
+            OutTgt.write('{}\n'.format(' '.join(target_segment)))
 
     def permute_train(InSrc, InTgt, OutSrc, OutTgt):
 
@@ -256,9 +252,9 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description='data preprocessing parameters')
-    parser.add_argument('--agenda', type=bool, default=True)
-    parser.add_argument('--dailymail', type=bool, default=True)
-    parser.add_argument('--rocstory', type=bool, default=True)
+    parser.add_argument('--agenda', type=bool, default=False)
+    parser.add_argument('--dailymail', type=bool, default=False)
+    parser.add_argument('--rocstory', type=bool, default=False)
     args = parser.parse_args()
 
     cur_dir = os.getcwd()

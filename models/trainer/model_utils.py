@@ -285,14 +285,19 @@ class LegacySeq2SeqDataset(AbstractSeq2SeqDataset):
                 
                 segment.append(current_segment)
                 position.append(1)
-                
+
+            # elif token in [self.tokenizer.pad_token_id, self.tokenizer.bos_token_id, self.tokenizer.eos_token_id]:
             elif token in [0, 1, 2]:
                 segment.append(0)
                 position.append(0)
                 
             else: 
-                segment.append(current_segment)
-                position.append(position[-1]+1)
+                if position:
+                    segment.append(current_segment)
+                    position.append(position[-1]+1)
+                else:
+                    segment.append(current_segment)
+                    position.append(1) # TODO!!!!!!!!!!!!!!
 
         return torch.tensor(segment), torch.tensor(position)
 
