@@ -53,9 +53,13 @@ bash scripts/test_dailymail.sh
 bash scripts/test_rocstory.sh
 ```
 
+## Easy-to-use baseline implementation 
+
+The baseline BART implementation can be found at [here](https://github.com/wyu97/Easy-use-BART). The repository contains the code to reproduce the baseline performance reported in our paper. All hyperparameters and evaluation process are the same as in this repository.
+
 ## Output examples
 
-Check our output examples in the `examples` folder.
+Please find our output examples in the `examples` folder.
 
 ## Reference
 If you find this repository useful in your research, please consider to cite our paper:
