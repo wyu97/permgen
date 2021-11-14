@@ -257,7 +257,7 @@ if __name__ == "__main__":
     parser.add_argument('--rocstory', type=bool, default=False)
     args = parser.parse_args()
 
-    cur_dir = os.getcwd()
+    cur_dir = os.path.join(os.getcwd(), 'dataset')
     if args.agenda:
         preprocess_agenda(os.path.join(cur_dir, 'agenda'), os.path.join(cur_dir, 'agenda_permute'))
         print('preprocessed agenda!')

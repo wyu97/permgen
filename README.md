@@ -6,7 +6,7 @@ This repository contains the code package for the **EMNLP'2021** paper:
 
 [Wenhao Yu](https://wyu97.github.io/) (ND), [Chenguang Zhu](https://www.microsoft.com/en-us/research/people/chezhu/) (MSR), [Tong Zhao](https://tzhao.io/) (ND), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao) (ND), [Meng Jiang](http://meng-jiang.com/) (ND).
 
-In this paper, we propose a novel framework PermGen whose objective is to maximize the expected log-likelihood of output paragraph distributions with respect to all possible sentence orders. PermGen uses hierarchical positional embedding and designs new procedures for training, and decoding. Experiments on three paragraph generation benchmarks demonstrate PermGen generates more diverse outputs with a higher quality than existing models.
+In this paper, we propose a novel framework PermGen whose objective is to maximize the expected log-likelihood of output paragraph distributions with respect to all possible sentence orders. PermGen uses hierarchical positional embedding and designs new procedures for training, and decoding. Experiments on three generation benchmarks showed PermGen generates more diverse outputs with a higher quality than existing models.
 
 ## Model Usage 
 
@@ -35,7 +35,7 @@ pip install torch==1.7.0
 ### Step 3: Randomly permute sentences
 Add/delete `--dataset` to choose the dataset.
 ```
-python dataset/preprocessing.py --agenda --dailymail --rocstory
+python dataset/preprocessing.py --agenda True --dailymail True --rocstory True
 ```
 
 ### Step 4: Train the model
