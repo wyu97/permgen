@@ -2,7 +2,7 @@
 
 This repository contains the code package for the **EMNLP'2021** paper:
 
-**[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)** \[[arXiv](https://arxiv.org/pdf/2104.07228.pdf)\] \[[slides]()\] \[[video]()\]
+**[Sentence-Permuted Paragraph Generation](https://arxiv.org/pdf/2104.07228.pdf)** \[[arXiv](https://arxiv.org/pdf/2104.07228.pdf)\] \[[slides](https://d3smihljt9218e.cloudfront.net/lecture/37277/slideshow/4e06517002e1f19ea64e18f9e1471c64.pdf)\] \[[video](https://underline.io/events/192/posters/8242/poster/37277-sentence-permuted-paragraph-generation)\]
 
 [Wenhao Yu](https://wyu97.github.io/) (ND), [Chenguang Zhu](https://www.microsoft.com/en-us/research/people/chezhu/) (MSR), [Tong Zhao](https://tzhao.io/) (ND), [Zhichun Guo](https://scholar.google.com/citations?user=BOFfWR0AAAAJ&hl=en&oi=ao) (ND), [Meng Jiang](http://meng-jiang.com/) (ND).
 
